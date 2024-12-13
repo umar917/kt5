@@ -1,0 +1,107 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Кт5</title> 
+    <style> 
+        body { 
+            margin: 0; 
+            padding: 0; 
+            background: url('https://pibig.info/uploads/posts/2022-07/1657202123_6-pibig-info-p-fon-trava-i-nebo-6.jpg') no-repeat center center fixed; 
+            background-size:cover; 
+            overflow: hidden; 
+        } 
+        .scene { 
+            position: relative; 
+            width: 100vw; 
+            height: 100vh; 
+        } 
+        .house {
+            position: absolute;
+            bottom: 20%;
+            left: 10%;
+            width: 700px;
+            height: 250px;
+        }
+        
+        .car {
+            position: absolute;
+            bottom: 100px;
+            left: 0;
+            width: 300px;
+            height: auto;
+            animation: moveCar 5s linear forwards; 
+        }
+
+        @keyframes moveCar {
+            0% {
+                transform: translateX(0); 
+            }
+            100% {
+                transform: translateX(calc(10% + 700px - 300px)); 
+            }
+        }
+
+        .tree {
+            position: absolute;
+            right: 11%;
+            bottom: 18%;
+            width: 350px;
+            height: auto;
+        }
+
+        .pug {
+            position: absolute;
+            right: 25%; 
+            bottom: 17%; 
+            width: 63px; 
+            height: auto;
+        }
+
+        .sun {
+            position: absolute;
+            top: 20px;
+            right: 50px;
+            width: 300px;
+            height: 300px;
+            z-index: 10; 
+            animation: rotateSun 10s linear infinite;
+        }
+
+        @keyframes rotateSun {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+    
+        }
+    }
+    </style> 
+</head> 
+<body> 
+    <div class="scene"> 
+        <div class="house">
+            <img src="https://pngicon.ru/file/uploads/dom-2.png" alt="House" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="car">
+            <img src="https://grizly.club/uploads/posts/2023-08/1691933568_grizly-club-p-kartinki-mashina-sboku-bez-fona-44.png" alt="Car" style="width: 100%; height: 200%; object-fit: cover;">
+        </div>
+        <div class="tree">
+            <img src="https://th.bing.com/th/id/R.263e8694edf192b7c9cd0cf4af84c11a?rik=ab%2fdHd%2bRBJoH%2fA&pid=ImgRaw&r=0" alt="Tree" style="width: 100%; height: auto; object-fit: cover;">
+        </div>
+        <div class="pug">
+            <img src="https://fonowik.club/uploads/posts/2022-11/1668966511_4-fonowik-club-p-sobaki-mops-bez-fona-4.png" alt="Pug Dog" style="width: 100%; height: auto; object-fit: cover;">
+        </div>
+        <div class="sun">
+            <img src="https://papik.pro/uploads/posts/2021-11/thumbs/1636579212_10-papik-pro-p-solntse-risunok-bez-fona-10.png" alt="Sun" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+    </div>  
+</body> 
+</html>
+
+
+
+

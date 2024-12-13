@@ -1,0 +1,111 @@
+body { 
+    margin: 0; 
+    padding: 0; 
+    background: url('https://pibig.info/uploads/posts/2022-07/1657202123_6-pibig-info-p-fon-trava-i-nebo-6.jpg') no-repeat center center fixed; 
+    background-size: cover; 
+    overflow: hidden; 
+}
+
+.scene { 
+    position: relative; 
+    width: 100vw; 
+    height: 100vh; 
+} 
+
+.house {
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    width: 700px;
+    height: 250px;
+    opacity: 0;
+    animation: fadeIn 2s forwards 1s; 
+}
+
+.tree {
+    position: absolute;
+    right: 5%;
+    bottom: 18%;
+    width: 350px;
+    height: auto;
+    opacity: 0;
+    animation: fadeIn 2s forwards 2s; 
+}
+
+.pug {
+    position: absolute;
+    left: 30%; /* Начальная позиция слева */
+    bottom: 20%; 
+    width: 70px; 
+    height: auto;
+    animation: jumpToTree 5s steps(5) forwards, fadeIn 2s forwards 3s;
+}
+
+@keyframes jumpToTree {
+    0% {
+        transform: translate(0, 0); /* Начальная позиция */
+    }
+    20% {
+        transform: translate(10vw, -20px); /* Маленький прыжок вправо и вверх */
+    }
+    40% {
+        transform: translate(20vw, 0); /* Приземление чуть дальше */
+    }
+    60% {
+        transform: translate(30vw, -20px); /* Следующий прыжок вправо и вверх */
+    }
+    80% {
+        transform: translate(40vw, 0); /* Почти у дерева */
+    }
+    100% {
+        transform: translate(45vw, 0); /* Конечная позиция у дерева */
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0; 
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.car {
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    width: 300px;
+    height: auto;
+    animation: moveCar 5s linear forwards 4s; /* Движение машины */
+}
+
+@keyframes moveCar {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100vw);
+    }
+}
+
+.sun {
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    width: 200px;
+    height: auto;
+    animation: moveSun 10s linear infinite;
+}
+
+@keyframes moveSun {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(20px); /* Лёгкое покачивание */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
